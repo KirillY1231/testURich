@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup as bs
 
-def open_xml(file_name):
+def openXml(file_name):
     with open(f'{file_name}', 'r') as file:
         content = file.readlines()
         content = "".join(content)
@@ -9,9 +9,9 @@ def open_xml(file_name):
 
 def getContent(file_num):
     if file_num == 1:
-        return open_xml(FILES_NAME[0])
+        return openXml(FILES_NAME[0])
     elif file_num == 2:
-        return open_xml(FILES_NAME[1])
+        return openXml(FILES_NAME[1])
 
 def Flights(flight):
     print(f'Какие рейсы входят в маршрут ({len(flight)} шт.):')
